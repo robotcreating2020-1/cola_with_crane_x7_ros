@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(shake_bottle_crane_x7_ros)
+project(cola_with_crane_x7_ros)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
