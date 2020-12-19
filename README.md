@@ -50,7 +50,7 @@ catkin_make
 IntelRealSenseを用いた動作はできません。  
 実機での動作を確認するために使用してください。  
   
-- シミュレータを使う場合、[crane_x7_ros/crane_x7_gazebo/world]に本パッケージ内のworldファイル[[cola_with_crane_x7_ros/crane_x7_gazebo/world/table3.world](https://github.com/robotcreating2020-1/cola_with_crane_x7_ros/blob/master/crane_x7_gazebo/worlds/table3.world)]を追加してください。  
+- シミュレータを使う場合、[crane_x7_ros/crane_x7_gazebo/world]に本パッケージ内のworldファイル[[cola_with_crane_x7_ros/crane_x7_gazebo/worlds/table3.world](https://github.com/robotcreating2020-1/cola_with_crane_x7_ros/blob/master/crane_x7_gazebo/worlds/table3.world)]を追加してください。  
   
 - また、ローカルの[crane_x7_ros/crane_x7_gazebo/launch](https://github.com/rt-net/crane_x7_ros/tree/master/crane_x7_gazebo/launch)の[crane_x7_with_table.launch](https://github.com/rt-net/crane_x7_ros/blob/master/crane_x7_gazebo/launch/crane_x7_with_table.launch)内の28行目を以下のように変更してください。  
   
