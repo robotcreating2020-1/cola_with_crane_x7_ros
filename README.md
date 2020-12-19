@@ -75,8 +75,13 @@ rosrun cola_with_crane_x7_ros detect_bottle.py
 ### 実機を使う場合  
   
 1. crane_x7とボトルを以下のように配置してください。  
+<div align="center">
 <img src= https://github.com/Dansato1203/images/blob/master/RobotDesign3/IMG_3795.jpg width=500px />  
+</div>  
+  
+<div align="center">
 <img src= https://github.com/Dansato1203/images/blob/master/RobotDesign3/%E3%83%9C%E3%83%88%E3%83%AB%E3%81%AE%E9%85%8D%E7%BD%AE%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8.png width=700px />  
+</div>  
 
 本パッケージのサンプルコードでは赤いボトルを掴みます。  
 配置イメージでは右側に赤いボトルを配置していますが、3点のうちどこでも構いません。  
