@@ -17,7 +17,9 @@ crane_x7とIntelRealSenseを用いて実機動作を行っています。
 　- Gazebo 9.0.0  
 - [rt-net/crane_x7_ros](https://github.com/rt-net/crane_x7_ros)  
 - [IntelRealSense/realsense-ros](https://github.com/IntelRealSense/realsense-ros)  
-
+  
+---
+  
 ## 環境構築  
   
 1. crane_x7_rosをインストールします。  
@@ -38,7 +40,9 @@ git clone https://github.com/robotcreating2020-1/cola_with_crane_x7_ros
 cd ~/catkin_ws  
 catkin_make  
 ```  
-
+  
+---
+  
 ## 実行方法  
   
 ### シミュレータを使う場合  
