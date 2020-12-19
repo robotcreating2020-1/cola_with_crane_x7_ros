@@ -1,4 +1,8 @@
 # cola_with_crane_x7_ros  
+  
+こちらはCRANE-X7で炭酸の入ったボトルを振るためのROSパッケージです。  
+本パッケージはオリジナルである[rt-net/crane_x7_ros](https://github.com/rt-net/crane_x7_ros)に対し、千葉工業大学 未来ロボティクス学科で開講された講義内でのグループ robotcreating2020-1が変更を加えています。  
+このパッケージには、 [Apache 2.0ライセンス](http://www.apache.org/licenses/LICENSE-2.0)で配布されている製作物が含まれています。  
 
 ## 実装内容  
   
@@ -62,7 +66,7 @@ IntelRealSenseを用いた動作はできません。
   
 1. シミュレータを起動します。  
 ```sh
-roslaunch crane_x7_gazebo crane_x7_with_table.launch  
+roslaunch cola_with_crane_x7_ros crane_x7_with_table.launch  
 ```  
 
 2. 本パッケージのサンプルコードを実行します。  
