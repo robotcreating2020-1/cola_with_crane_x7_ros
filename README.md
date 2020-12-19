@@ -29,11 +29,11 @@ git clone https://github.com/rt-net/crane_x7_ros.git
 ```  
 　詳しくは[こちら](https://github.com/rt-net/crane_x7_ros)を参照してください。  
   
-1. realsense-rosをインストールします。  
+2. realsense-rosをインストールします。  
 　詳しくは[こちら](https://github.com/IntelRealSense/realsense-ros)を参照してください。  
 　また、今回は[demura.net/Ubuntu18.04: RealSense D435iをROS Melodicで使う](https://demura.net/robot/16525.html)を参考にさせていただきました。  
   
-1. 本パッケージをインストールします。  
+3. 本パッケージをインストールします。  
 ```sh
 cd ~/catkin_ws/src  
 git clone https://github.com/robotcreating2020-1/cola_with_crane_x7_ros  
@@ -50,9 +50,9 @@ catkin_make
 IntelRealSenseを用いた動作はできません。  
 実機での動作を確認するために使用してください。  
   
-シミュレータを使う場合、[rt-net/crane_x7_ros/crane_x7_gazebo](https://github.com/rt-net/crane_x7_ros/tree/master/crane_x7_gazebo)の[worldディレクトリ](https://github.com/rt-net/crane_x7_ros/tree/master/crane_x7_gazebo/worlds)に本パッケージ[cola_with_crane_x7_ros/crane_x7_gazebo/world]の[table3.world](https://github.com/robotcreating2020-1/cola_with_crane_x7_ros/blob/master/crane_x7_gazebo/worlds/table3.world)を追加してください。  
+- シミュレータを使う場合、[rt-net/crane_x7_ros/crane_x7_gazebo](https://github.com/rt-net/crane_x7_ros/tree/master/crane_x7_gazebo)の[worldディレクトリ](https://github.com/rt-net/crane_x7_ros/tree/master/crane_x7_gazebo/worlds)に本パッケージ内のworldファイル[[cola_with_crane_x7_ros/crane_x7_gazebo/world](https://github.com/robotcreating2020-1/cola_with_crane_x7_ros/tree/master/crane_x7_gazebo/worlds)]の[table3.world](https://github.com/robotcreating2020-1/cola_with_crane_x7_ros/blob/master/crane_x7_gazebo/worlds/table3.world)を追加してください。  
   
-また、[rt-net/crane_x7_ros/crane_x7_gazebo](https://github.com/rt-net/crane_x7_ros/    tree/master/crane_x7_gazebo)の[launchディレクトリ](https://github.com/rt-net/crane_x7_ros/tree/master/crane_x7_gazebo/launch)の[crane_x7_with_table.launch](https://github.com/rt-net/crane_x7_ros/blob/master/crane_x7_gazebo/launch/crane_x7_with_table.launch)内の28行目を以下のように変更してください。  
+- また、[rt-net/crane_x7_ros/crane_x7_gazebo](https://github.com/rt-net/crane_x7_ros/tree/master/crane_x7_gazebo)の[launchディレクトリ](https://github.com/rt-net/crane_x7_ros/tree/master/crane_x7_gazebo/launch)の[crane_x7_with_table.launch](https://github.com/rt-net/crane_x7_ros/blob/master/crane_x7_gazebo/launch/crane_x7_with_table.launch)内の28行目を以下のように変更してください。  
   
 - 変更前  
 `<arg name="world_name" value="$(find crane_x7_gazebo)/worlds/table.world"/>`  
@@ -65,7 +65,7 @@ IntelRealSenseを用いた動作はできません。
 roslaunch crane_x7_gazebo crane_x7_with_table.launch  
 ```  
 
-1. 本パッケージのサンプルコードを実行します。  
+2. 本パッケージのサンプルコードを実行します。  
 　一連の動作を確認する場合、detect_bottle.pyを実行してください。  
 ```sh
 rosrun cola_with_crane_x7_ros detect_bottle.py
@@ -82,27 +82,27 @@ rosrun cola_with_crane_x7_ros detect_bottle.py
 配置イメージでは右側に赤いボトルを配置していますが、3点のうちどこでも構いません。  
   
   
-1. IntelRealSenseを起動します。
+2. IntelRealSenseを起動します。
 ```sh
 roslaunch realsense2_camera rs_camera.launch  
 ```
-1. crane_x7を起動します。  
+3. crane_x7を起動します。  
 CRANE-X7の制御信号ケーブルを制御用パソコンへ接続し、以下を実行します。  
 ```sh
 sudo chmod 666 /dev/ttyUSB0  
 ```  
 
-1. 実機で動作を確認する場合、制御信号ケーブルを接続した状態で次のコードを実行します。  
+4. 実機で動作を確認する場合、制御信号ケーブルを接続した状態で次のコードを実行します。  
 ```sh
 roslaunch crane_x7_bringup demo.launch fake_execution:=false  
 ```  
 
-1. 次に本パッケージのfind_red.pyを実行します。  
+5. 次に本パッケージのfind_red.pyを実行します。  
 ```sh
 rosrun cola_with_crane_x7_ros find_red.py  
 ```  
 
-1. 最後にdetect_bottle.pyを実行するとアームが動きコーラを振ります。  
+6. 最後にdetect_bottle.pyを実行するとアームが動きコーラを振ります。  
 ```sh
 rosrun cola_with_crane_x7_ros detect_bottle.py  
 ```
