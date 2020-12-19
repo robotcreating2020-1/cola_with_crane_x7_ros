@@ -1,10 +1,75 @@
-#crane_x7_example  
+# crane_x7_example  
   
-## Description  
+## cola_with_crane_x7_ros/crane_x7_example
   
 [crane_x7](https://github.com/rt-net/crane_x7_ros)でコーラを振るときに用いるサンプルコード集です。  
-crane_x7の他にIntelRealSense/realsense-rosを用いています。  
+crane_x7_rosの他にIntelRealSense/realsense-rosを用いています。  
   
 ---
   
-## Run
+## 実装内容  
+  
+### bottle_drop.py
+  
+ボトルを緩衝材の上に落とすことを想定したコードです。  
+ボトルを掴み、ボトルを寝かせ、高さ200mmから真下に落とします。
+  
+次のコマンドで動作を実行します。  
+```sh
+rosrun cola_with_crane_x7_ros bottle_drop.py  
+```  
+  
+--- 
+  
+### shake_mode.py
+
+ボトルを持ち上げ、人間がボトルを振るようにアーム全体を用いて振ります。  
+次のコマンドで動作を実行します。  
+```sh
+rosrun cola_with_crane_x7_ros shake_mode.py  
+```  
+  
+---  
+  
+### looking_bottle.py  
+  
+3色のボトルが決められた位置にあることを想定し、realsenseにボトルを見せに行く動作を行います。  
+次のコマンドで動作を実行します。  
+```sh
+rosrun cola_with_crane_x7_ros looking_bottle.py  
+```  
+  
+---
+  
+### find_red.py  
+
+赤色を検出するプログラムです。  
+[IntelRealSense/realsense-ros](https://github.com/IntelRealSense/realsense-ros)を用いています。  
+realsenseからカラー画像をsubscribeし、imgmsg_to_cv2を用いてROSからOpencvの形式に変換しています。  
+
+subscribeしたカラー画像から赤色成分を抽出し、その輪郭を矩形で囲っています。  
+また、検知した赤色成分の輪郭の矩形の面積を/bottle_sizeというトピックにpublishしています。  
+このサンプルコードでは赤色ボトル以外の赤色成分の誤検出を防ぐため、矩形の面積が10000以上のときのみpublishしています。  
+面積が一定(サンプルの場合10000)以上の赤い物体が検出できない場合は特に何も行いません。  
+
+<img src=https://github.com/Dansato1203/images/blob/master/RobotDesign3/IMG_3711.PNG width = 500px/>  
+上記の画像は実際に赤い物体を検出し、輪郭を矩形で囲ったサンプル画像になります。  
+  
+次のコマンドで動作を実行します。  
+```sh
+rosrun cola_with_crane_x7_ros find_red.py  
+```  
+
+
+--- 
+  
+### detect_bottle.py
+  
+上記のbottle_drop.py, shake_mode.py, lookng_bottle.pyを統合し、掴んだボトルをもとの位置に戻す動作を追加したコードです。  
+find_red.pyを実行した状態で実行することで、3つの位置のボトルから赤いボトルを検出し、赤いボトルを振ることができます。  
+
+次のコマンドで動作を実行します。  
+```sh
+rosrun cola_with_crane_x7_ros detect_bottle.py  
+```  
+
