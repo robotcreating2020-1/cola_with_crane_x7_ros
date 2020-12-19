@@ -27,11 +27,11 @@ crane_x7とIntelRealSenseを用いて実機動作を行っています。
 cd ~/catkin_ws/src  
 git clone https://github.com/rt-net/crane_x7_ros.git  
 ```  
-　詳しくは[こちら](https://github.com/rt-net/crane_x7_ros)を参照してください。  
+詳しくは[こちら](https://github.com/rt-net/crane_x7_ros)を参照してください。  
   
 2. realsense-rosをインストールします。  
-　詳しくは[こちら](https://github.com/IntelRealSense/realsense-ros)を参照してください。  
-　また、今回は[demura.net/Ubuntu18.04: RealSense D435iをROS Melodicで使う](https://demura.net/robot/16525.html)を参考にさせていただきました。  
+詳しくは[こちら](https://github.com/IntelRealSense/realsense-ros)を参照してください。  
+また、今回は[demura.net/Ubuntu18.04: RealSense D435iをROS Melodicで使う](https://demura.net/robot/16525.html)を参考にさせていただきました。  
   
 3. 本パッケージをインストールします。  
 ```sh
@@ -66,7 +66,7 @@ roslaunch crane_x7_gazebo crane_x7_with_table.launch
 ```  
 
 2. 本パッケージのサンプルコードを実行します。  
-　一連の動作を確認する場合、detect_bottle.pyを実行してください。  
+一連の動作を確認する場合、detect_bottle.pyを実行してください。  
 ```sh
 rosrun cola_with_crane_x7_ros detect_bottle.py
 ```  
