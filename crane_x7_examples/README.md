@@ -23,7 +23,7 @@ rosrun cola_with_crane_x7_ros bottle_drop.py
   
 ### shake_mode.py
 
-ボトルを持ち上げ、人間がボトルを振るようにアーム全体を用いて振ります。  
+ボトルを持ち上げ、人間がボトルを振るようにアーム全体を用いて振る動作を行います。  
 次のコマンドで動作を実行します。  
 ```sh
 rosrun cola_with_crane_x7_ros shake_mode.py  
