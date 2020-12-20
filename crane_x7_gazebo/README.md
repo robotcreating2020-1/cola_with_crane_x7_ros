@@ -8,7 +8,7 @@
   
 1. worldsフォルダ内にtable3.worldというworldファイルを追加しています。  
 table3.worldには、机の上に径が50mm, 高さが200mmのボトルを3本を追加しています。  
-< >
+<img src=https://github.com/Dansato1203/images/blob/master/RobotDesign3/IMG_3815.PNG width=500px/>  
   
 2. launchファイルの一部を[オリジナル](https://github.com/rt-net/crane_x7_ros/blob/master/crane_x7_gazebo/launch/crane_x7_with_table.launch)から変更しています。  
   
