@@ -11,6 +11,12 @@
         <uri>model://table</uri>
       </include>
 
+       <model name="colabottle">
+      <include>
+        <uri>model://Bottle-model-1-stl.</uri>
+	  <pose>1 0 0 0 0 0</pose>
+      </include>
+
       <!-- X7を机の端に配置するため、机を移動、回転する -->
       <pose>0.29 0 0 0 0 1.5708</pose>
     </model>
