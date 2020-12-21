@@ -66,7 +66,7 @@ roslaunch cola_with_crane_x7_ros crane_x7_with_table.launch
 ```sh
 rosrun cola_with_crane_x7_ros detect_bottle.py
 ```  
-その他のサンプルコードの詳細は[../cola_with_crane_x7_ros/crane_x7_example](https://github.com/robotcreating2020-1/cola_with_crane_x7_ros/tree/master/crane_x7_examples)を参照してください。
+その他のサンプルコードの詳細は[../cola_with_crane_x7_ros/cola_example](https://github.com/robotcreating2020-1/cola_with_crane_x7_ros/tree/master/cola_examples)を参照してください。
   
 ### 実機を使う場合  
   
@@ -108,7 +108,7 @@ rosrun cola_with_crane_x7_ros find_red.py
 rosrun cola_with_crane_x7_ros detect_bottle.py  
 ```
 
-find_red.py、detect_bottle.pyの詳細は[こちら](https://github.com/robotcreating2020-1/cola_with_crane_x7_ros/tree/master/crane_x7_examples)を参照してください。  
+find_red.py、detect_bottle.pyの詳細は[こちら](https://github.com/robotcreating2020-1/cola_with_crane_x7_ros/tree/master/cola_examples)を参照してください。  
   
 ---
   
