@@ -51,15 +51,17 @@ class image_converter:
       # グレースケールから白黒に変換
       ret,thresh = cv2.threshold(gray_image, 0, 255, cv2.THRESH_OTSU)
 
+      # ボトルの輪郭検出
       labels, contours, hierarchy = cv2.findContours(thresh, cv2.RETR_LIST, cv2.CHAIN_APPROX_NONE)
 
       for i in range(0, len(contours)):
         if len(contours[i]) > 0:
 
-          # remove small objects
+          # 小さいものは排除
             if cv2.contourArea(contours[i]) < 500:
                 continue
 
+         #  検出された輪郭線を代入、矩形外枠の座標を計算、矩形を描画
             rect = contours[i]
             x, y, w, h = cv2.boundingRect(rect)
             cv2.rectangle(thresh, (x, y), (x + w, y + h), (255, 0, 0), 10)
@@ -70,10 +72,10 @@ class image_converter:
 
       
       #ウインドウのサイズを変更                                                               
-      cv_half_image = cv2.resize(cv_image,   (0,0),fx=0.5, fy=0.5)
-      cv_half_image2 = cv2.resize(cv_image2, (0,0),fx=0.5,fy=0.5);
-      cv_half_image3 = cv2.resize(gray_image, (0,0),fx=0.5,fy=0.5);
-      cv_half_image4 = cv2.resize(thresh, (0,0),fx=0.5,fy=0.5);
+      #cv_half_image = cv2.resize(cv_image,   (0,0),fx=0.5, fy=0.5)
+      #cv_half_image2 = cv2.resize(cv_image2, (0,0),fx=0.5,fy=0.5);
+      #cv_half_image3 = cv2.resize(gray_image, (0,0),fx=0.5,fy=0.5);
+      #cv_half_image4 = cv2.resize(thresh, (0,0),fx=0.5,fy=0.5);
 
       # ウインドウ表示                                                                         
       cv2.imshow("Origin Image", cv_image)
