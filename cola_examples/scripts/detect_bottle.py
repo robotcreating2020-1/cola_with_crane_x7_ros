@@ -18,7 +18,7 @@ y = 0
 #callback関数
 def callback(data):
     global finish
-    if finish == True:
+    if finish:
       global y
       pub = rospy.Publisher("find_red", Int32, queue_size=1)
       pub.publish(flag) 
