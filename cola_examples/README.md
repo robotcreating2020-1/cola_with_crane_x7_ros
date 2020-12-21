@@ -1,13 +1,9 @@
-# crane_x7_example  
+# cola_example  
   
 本パッケージはオリジナルである[rt-net/crane_x7_ros](https://github.com/rt-net/crane_x7_ros)に対し、千葉工業大学 未来ロボティクス学科で開講された講義内でのグループ robotcreating2020-1が変更を加えています。  
 このパッケージには、 [Apache 2.0ライセンス](http://www.apache.org/licenses/LICENSE-2.0)で配布されている製作物が含まれています。  
   
----
-  
-## cola_with_crane_x7_ros/crane_x7_example
-  
-[crane_x7](https://github.com/rt-net/crane_x7_ros)でコーラを振るときに用いるサンプルコード集です。  
+[crane_x7](https://github.com/rt-net/crane_x7_ros)でコーラを振るときに用いるコードをまとめたサンプルコード集です。  
 crane_x7_rosの他にIntelRealSense/realsense-rosを用いています。  
   
 ---
