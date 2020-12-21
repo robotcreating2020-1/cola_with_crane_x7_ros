@@ -1,6 +1,8 @@
-# cola_with_crane_x7_ros/crane_x7_gazebo  
+# cola_gazebo  
   
 本パッケージはオリジナルである[rt-net/crane_x7_ros](https://github.com/rt-net/crane_x7_ros)対し、千葉工業大学 未来ロボティクス学科で開講された講義内でのグループ robotcreating2020-1が変更を加えています。
+このパッケージには、 [Apache 2.0ライセンス](http://www.apache.org/licenses/LICENSE-2.0)で配布されている製作物が含まれています。
+
   
 ---
   
