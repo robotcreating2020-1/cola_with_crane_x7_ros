@@ -112,7 +112,7 @@ find_red.py、detect_bottle.pyの詳細は[こちら](https://github.com/robotcr
   
 ---
   
-### LICENCE  
+### LICENSE  
   
 This repository is licensed under The BSD 3-Clause License, see [LICENSE](https://github.com/robotcreating2020-1/cola_with_crane_x7_ros/blob/master/LICENSE).  
 
